@@ -8,6 +8,12 @@
   </head>
   <body>
     <div class="container">
+      <div class="row header">
+            <img src="~/img/parcel.png" class="header-image" id="right">
+            <img src="~/img/open.png" class="header-image" id="left">
+            <h1>Percy's Parcel Processing</h1>
+            <p><em>"It'll </em> probably <em>get there"</em></p>
+        </div>
       <h2>Parcel for @Model.Recipient </h2>
       <p>Dimensions:</p>
       <ul>
@@ -17,7 +23,7 @@
       </ul>
       <p><strong>Volume: @Model.Volume() </strong></p>
       <p><strong>Shipping Cost: $@Model.CostToShip() </strong></p>
-      <a href='/parcels'><button>See your packages</button></a>
+      <a href='/parcels'><button class="btn btn-warning">See your packages</button></a>
     </div>
   </body>
 </html>

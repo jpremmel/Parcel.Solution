@@ -10,15 +10,20 @@
   </head>
   <body>
     <div class="container">
-        <h1>Parcel/Index.cshtml</h1>
-        <h1>Here are your packages: </h1>
+        <div class="row header">
+            <img src="~/img/parcel.png" class="header-image" id="right">
+            <img src="~/img/open.png" class="header-image" id="left">
+            <h1>Percy's Parcel Processing</h1>
+            <p><em>"It'll </em> probably <em>get there"</em></p>
+        </div>
+        <h3>Here are your packages: </h3>
         <ul>
           @foreach (Package package in Model)
           {
-            <li>@package.Recipient</li>
+            <li>Package for: @package.Recipient   Cost: $@package.CostToShip()</li>
           }
         </ul>
-        <a href='/'><button>Add another package</button></a>
+        <a href='/'><button class="btn btn-warning">Add another package</button></a>
     </div>
   </body>
 </html>
