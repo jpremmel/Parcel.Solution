@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Parcels</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link href="~/css/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+        <h1>Home/Index.cshtml</h1>
+
+
+          <h1>Enter your parcel information:</h1>
+          <form action="/order" method="post">
+
+            <label for="Recipient">Enter a Recipient:</label>
+            <input id="Recipient" name="Recipient" type="text"><br>
+
+            <label for="Height">Enter a Height:</label>
+            <input id="Height" name="Height" type="text"><br>
+
+            <label for="Width">Enter a Width:</label>
+            <input id="Width" name="Width" type="text"><br>
+
+            <label for="Length">Enter a Length:</label>
+            <input id="Length" name="Length" type="text"><br>
+
+            <label for="Weight">Enter a Weight:</label>
+            <input id="Weight" name="Weight" type="text"><br>
+
+          <button type="submit">Submit</button>
+          </form>
+
+
+    </div>
+  </body>
+</html>
