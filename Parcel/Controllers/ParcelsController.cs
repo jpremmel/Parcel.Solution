@@ -30,6 +30,13 @@ namespace Parcel.Controllers
             return result;
         }
 
+        [HttpPost("/parcels/delete")]
+        public ActionResult Delete(int id)
+        {
+            Package.DeletePackage(id);
+            return RedirectToAction("Index", "Home");
+        }
+
 
     }
 }

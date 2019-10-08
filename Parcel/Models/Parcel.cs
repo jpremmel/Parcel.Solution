@@ -39,5 +39,15 @@ namespace Parcel.Models
             return cost;
         }
 
+        public static void DeletePackage(int id)
+        {
+            foreach(Package package in PackageList)
+            {
+                if (package.ID == id)
+                {
+                    PackageList.Remove(package);
+                }
+            }
+        }
     }
 }

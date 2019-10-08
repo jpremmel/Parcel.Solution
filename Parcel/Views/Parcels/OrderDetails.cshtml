@@ -25,6 +25,10 @@
         <p><strong>Volume: @Model.Volume() </strong></p>
         <p><strong>Shipping Cost: $@Model.CostToShip() </strong></p>
       </div>
+      <form action="/parcels/delete" method="post">
+        <button type="submit" class="btn btn-warning" >Nevermind, delete this package</button>
+        <!-- ***Need a way to pass @Model.ID in to the controller when the form is submitted*** -->
+      </form>
       <a href='/parcels'><button class="btn btn-warning">See your packages</button></a>
     </div>
   </body>
