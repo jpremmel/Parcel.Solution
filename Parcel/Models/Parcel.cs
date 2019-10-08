@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 
 namespace Parcel.Models
 {
@@ -8,6 +9,8 @@ namespace Parcel.Models
         public float Width { get; set; }
         public float Length { get; set; }
         public float Weight { get; set; }
+        public static List<Package> PackageList = new List<Package> { };
+
 
         public Package(string recipient, float height, float width, float length, float weight)
         {
@@ -16,6 +19,7 @@ namespace Parcel.Models
             Width = width;
             Length = length;
             Weight = weight;
+            PackageList.Add(this);
         }
 
         public float Volume()

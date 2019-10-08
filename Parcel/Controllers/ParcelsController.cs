@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Parcel.Models;
+using System.Collections.Generic;
 
 namespace Parcel.Controllers
 {
@@ -8,7 +9,8 @@ namespace Parcel.Controllers
         [HttpGet("/parcels")]
         public ActionResult Index()
         {
-            return View();
+            List<Package> packageList = Package.PackageList;
+            return View(packageList);
         }
 
         [HttpPost("/parcels/order-details")]
