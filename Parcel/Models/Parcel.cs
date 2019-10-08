@@ -10,6 +10,8 @@ namespace Parcel.Models
         public float Width { get; set; }
         public float Length { get; set; }
         public float Weight { get; set; }
+        public int ID { get; }
+        public static int idAssigner { get; set;}
         public static List<Package> PackageList = new List<Package> { };
 
 
@@ -20,6 +22,8 @@ namespace Parcel.Models
             Width = width;
             Length = length;
             Weight = weight;
+            idAssigner++;
+            ID = idAssigner;
             PackageList.Add(this);
         }
 

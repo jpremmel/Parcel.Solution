@@ -21,7 +21,7 @@
         <ul>
           @foreach (Package package in Model)
           {
-            <li>Package for: @package.Recipient   Cost: $@package.CostToShip()</li>
+            <li>Package for: @package.Recipient   Cost: $@package.CostToShip()   ID: @package.ID</li>
           }
         </ul>
       </div>
