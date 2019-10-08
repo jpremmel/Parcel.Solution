@@ -5,26 +5,19 @@ namespace Parcel.Controllers
 {
     public class ParcelsController : Controller
     {
+        [HttpGet("/parcels")]
+        public ActionResult Index()
+        {
+            return View();
+        }
 
-        // [HttpGet("/items")]
-        // public ActionResult Index()
-        // {
-        //     List<Item> allItems = Item.GetAll();
-        //     return View(allItems);
-        // }
+        [HttpPost("/parcels/order-details")]
+        public ActionResult OrderDetails(string recipient, float height, float width, float length, float weight)
+        {
+            Package package = new Package(recipient, height, width, length, weight);
+            return View(package);
+        }
 
-        // [HttpGet("/items/new")]
-        // public ActionResult CreateForm()
-        // {
-        //     return View();
-        // }
-
-        // [HttpPost("/items")]
-        // public ActionResult Create(string description)
-        // {
-        //     Item myItem = new Item(description);
-        //     return RedirectToAction("Index");
-        // }
 
     }
 }

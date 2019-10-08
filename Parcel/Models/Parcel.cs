@@ -1,15 +1,17 @@
 
 namespace Parcel.Models
 {
-    public class ParcelVariables
+    public class Package
     {
-        private float Height { get; set; }
-        private float Width { get; set; }
-        private float Length { get; set; }
-        private float Weight { get; set; }
+        public string Recipient { get; set; }
+        public float Height { get; set; }
+        public float Width { get; set; }
+        public float Length { get; set; }
+        public float Weight { get; set; }
 
-        public ParcelVariables(float height, float width, float length, float weight)
+        public Package(string recipient, float height, float width, float length, float weight)
         {
+            Recipient = recipient;
             Height = height;
             Width = width;
             Length = length;

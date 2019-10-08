@@ -29,8 +29,8 @@ namespace Parcel
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-            name: "default",
-            template: "{controller=Home}/{action=Index}/{id?}");
+                name: "default",
+                template: "{controller=Home}/{action=Index}/{id?}");
             });
 
             app.UseStaticFiles(); //enable use of static files from wwwroot folder -> css styling

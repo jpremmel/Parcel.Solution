@@ -8,14 +8,15 @@
   </head>
   <body>
     <div class="container">
-      <h1>Enter your parcel information:</h1>
-      <form action="/order" method="post">
-
-
-
-
-      <button type="submit">Submit</button>
-      </form>
+      <h2>Parcel for @Model.Recipient </h2>
+      <p>Dimensions:</p>
+      <ul>
+        <li>Height: @Model.Height </li>
+        <li>Width: @Model.Width </li>
+        <li>Length: @Model.Length </li>
+      </ul>
+      <p><strong>Volume: @Model.Volume() </strong></p>
+      <p><strong>Shipping Cost: $@Model.CostToShip() </strong></p>
     </div>
   </body>
 </html>
