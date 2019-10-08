@@ -8,21 +8,23 @@
   </head>
   <body>
     <div class="container">
-      <div class="row header">
-            <img src="~/img/parcel.png" class="header-image" id="right">
-            <img src="~/img/open.png" class="header-image" id="left">
-            <h1>Percy's Parcel Processing</h1>
-            <p><em>"It'll </em> probably <em>get there"</em></p>
-        </div>
-      <h2>Parcel for @Model.Recipient </h2>
-      <p>Dimensions:</p>
-      <ul>
-        <li>Height: @Model.Height </li>
-        <li>Width: @Model.Width </li>
-        <li>Length: @Model.Length </li>
-      </ul>
-      <p><strong>Volume: @Model.Volume() </strong></p>
-      <p><strong>Shipping Cost: $@Model.CostToShip() </strong></p>
+      <div class="header">
+          <img src="~/img/parcel.png" class="header-image" id="right">
+          <img src="~/img/open.png" class="header-image" id="left">
+          <h1>Percy's Parcel Processing</h1>
+          <p><em>"It'll </em> probably <em>get there (probably)"</em></p>
+      </div>
+      <h3>Parcel for @Model.Recipient </h3>
+      <div class="center">
+        <p><strong>Dimensions:</strong></p>
+        <ul>
+          <li>Height: @Model.Height </li>
+          <li>Width: @Model.Width </li>
+          <li>Length: @Model.Length </li>
+        </ul>
+        <p><strong>Volume: @Model.Volume() </strong></p>
+        <p><strong>Shipping Cost: $@Model.CostToShip() </strong></p>
+      </div>
       <a href='/parcels'><button class="btn btn-warning">See your packages</button></a>
     </div>
   </body>

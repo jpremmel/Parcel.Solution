@@ -10,19 +10,21 @@
   </head>
   <body>
     <div class="container">
-        <div class="row header">
-            <img src="~/img/parcel.png" class="header-image" id="right">
-            <img src="~/img/open.png" class="header-image" id="left">
-            <h1>Percy's Parcel Processing</h1>
-            <p><em>"It'll </em> probably <em>get there"</em></p>
-        </div>
-        <h3>Here are your packages: </h3>
+      <div class="header">
+          <img src="~/img/parcel.png" class="header-image" id="right">
+          <img src="~/img/open.png" class="header-image" id="left">
+          <h1>Percy's Parcel Processing</h1>
+          <p><em>"It'll </em> probably <em>get there (probably)"</em></p>
+      </div>
+      <h3>Here are your packages: </h3>
+      <div class="center">
         <ul>
           @foreach (Package package in Model)
           {
             <li>Package for: @package.Recipient   Cost: $@package.CostToShip()</li>
           }
         </ul>
+      </div>
         <a href='/'><button class="btn btn-warning">Add another package</button></a>
     </div>
   </body>

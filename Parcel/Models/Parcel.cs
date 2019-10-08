@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace Parcel.Models
 {
@@ -30,7 +31,8 @@ namespace Parcel.Models
 
         public float CostToShip()
         {
-            return (float)2.00;
+            float cost = (Volume()*Weight)*(float)0.1 + 5;
+            return cost;
         }
 
     }
